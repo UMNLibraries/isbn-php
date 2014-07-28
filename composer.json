@@ -1,0 +1,29 @@
+{
+  "name": "umnlib/isbn",
+  "description": "A PHP package for International Standard Book Numbers (ISBNs).",
+  "keywords": [],
+  "authors": [
+    {
+      "name": "David Naughton",
+      "email": "naughton@umn.edu"
+    }
+  ],
+
+  "require": {
+  },
+
+  "repositories": [
+  ],   
+
+  "require-dev": {
+    "phpunit/phpunit": ">=3.7"
+  },
+
+  "autoload": {
+    "psr-4": {"UmnLib\\Core\\ISBN\\": "src/"}
+  },
+
+  "autoload-dev": {
+    "psr-4": {"UmnLib\\Core\\Tests\\": "tests/"}
+  }
+}
