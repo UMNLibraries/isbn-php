@@ -20,7 +20,7 @@
   },
 
   "autoload": {
-    "psr-4": {"UmnLib\\Core\\ISBN\\": "src/"}
+    "psr-4": {"UmnLib\\Core\\Isbn\\": "src/"}
   },
 
   "autoload-dev": {

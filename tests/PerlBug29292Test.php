@@ -1,30 +1,26 @@
-#!/usr/bin/php -q
 <?php
 
-require_once 'simpletest/autorun.php';
-SimpleTest :: prefer(new TextReporter());
-set_include_path('../php' . PATH_SEPARATOR . get_include_path());
-require_once 'ISBN/Factory.php';
+namespace UmnLib\Core\Tests;
 
-//error_reporting( E_STRICT );
+use UmnLib\Core\Isbn\Factory;
 
-class ISBNTest extends UnitTestCase
+class PerlBug29292Test extends \PHPUnit_Framework_TestCase
 {
-    function test_as_string()
-    {
-        $isbn_strings = array(
-            '91-7119-704-4',
-            '978-91-7119-810-5',
-            '978-0-911910-00-1',
-            '978-0-88264-180-5',
-	);
+  function testAsString()
+  {
+    $isbnStrings = array(
+      '91-7119-704-4',
+      '978-91-7119-810-5',
+      '978-0-911910-00-1',
+      '978-0-88264-180-5',
+    );
 
-        foreach ($isbn_strings as $isbn_string) {
-            $normalized_isbn = preg_replace('/-/', '', $isbn_string);
-            $isbn = ISBN_Factory::create( $normalized_isbn );
-            $this->assertEqual($isbn->as_string(), $isbn_string);
-        }
+    foreach ($isbnStrings as $isbnString) {
+      $normalizedIsbn = preg_replace('/-/', '', $isbnString);
+      $isbn = Factory::create($normalizedIsbn);
+      $this->assertEquals($isbnString, $isbn->asString());
     }
+  }
 
 /*
 Hi Ed and Brian,
@@ -72,6 +68,3 @@ print "$pretty\n";
 */
 
 }
-
-?>
-
