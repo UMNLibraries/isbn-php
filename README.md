@@ -10,12 +10,12 @@ Install via [Composer](http://getcomposer.org). In your project's `composer.json
 
 ```json
   "require": {
-    "umnlib/argvalidator": ">=1.0.0"
+    "umnlib/isbn": ">=1.0.0"
   },
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@github.umn.edu:Libraries/argvalidator-php.git"
+      "url": "git@github.umn.edu:Libraries/isbn-php.git"
     }
   ]
 ```
